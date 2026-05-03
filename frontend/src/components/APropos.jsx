@@ -56,6 +56,7 @@ function APropos() {
     { nom: "Certified Kubernetes Administrator (CKA)", organisme: "CNCF", annee: "future" },
     { nom: "HashiCorp Vault Associate", organisme: "HashiCorp", annee: "future" },
     { nom: "CompTIA Security+", organisme: "CompTIA", annee: "future" },
+    { nom: "Terraform Associate", organisme: "HashiCorp", annee: "future" },
   ];
 
   return (
