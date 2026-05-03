@@ -94,13 +94,13 @@ function APropos() {
               <Link to="/contact" className="btn btn-secondaire">Me contacter</Link>
             </div>
             <div className="apropos-socials">
-              <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Visiter le profil GitHub de Ibrahima Diallo">
                 <span>⌨️</span> GitHub
               </a>
-              <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Visiter le profil LinkedIn de Ibrahima Diallo">
                 <span>💼</span> LinkedIn
               </a>
-              <a href="https://maps.app.goo.gl/QRVo3GdPx6v4rBb7A">
+              <a href="https://maps.app.goo.gl/QRVo3GdPx6v4rBb7A" aria-label="Voir l'emplacement de Dakar, Sénégal sur Google Maps">
               <span className="social-link">
                 <span>📍</span> Dakar, Sénégal
               </span>
