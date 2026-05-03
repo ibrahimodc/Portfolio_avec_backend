@@ -82,7 +82,7 @@ function APropos() {
             </div>
             <div className="apropos-status">
               <span className="status-dot" />
-              Disponible
+              Disponible pour de nouvelles opportunités
             </div>
           </div>
           <div className="apropos-hero-text">
