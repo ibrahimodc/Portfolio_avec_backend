@@ -14,10 +14,19 @@ const API_URL = "/api/projets";
  * @throws {Error} Si la requête échoue
  */
 async function request(url, options = {}) {
-  const res  = await fetch(url, options);
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.message || `Erreur HTTP ${res.status}`);
-  return json;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+  try {
+    const res = await fetch(url, { ...options, signal: controller.signal });
+    clearTimeout(timeoutId);
+    const json = await res.json();
+    if (!res.ok) throw new Error(json.message || `Erreur HTTP ${res.status}`);
+    return json;
+  } catch (error) {
+    clearTimeout(timeoutId);
+    if (error.name === 'AbortError') throw new Error('Requête annulée (timeout)');
+    throw error;
+  }
 }
 
 export async function getProjets() {
