@@ -19,6 +19,21 @@ connectDB();
 const app = express();
 const path = require("path");
 
+// Rate limiting simple (en développement)
+const requestCounts = {};
+const rateLimit = (req, res, next) => {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  if (!requestCounts[ip]) requestCounts[ip] = [];
+  requestCounts[ip] = requestCounts[ip].filter(time => now - time < 60000); // 1 minute
+  if (requestCounts[ip].length >= 100) { // 100 req/min
+    return res.status(429).json({ success: false, message: "Trop de requêtes." });
+  }
+  requestCounts[ip].push(now);
+  next();
+};
+app.use(rateLimit);
+
 // Autorise les requêtes depuis le frontend React (tous les ports localhost en dev)
 app.use(cors({ 
   origin: (origin, callback) => {
