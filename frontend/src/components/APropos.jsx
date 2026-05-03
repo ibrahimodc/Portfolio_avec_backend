@@ -173,6 +173,30 @@ function APropos() {
           ))}
         </div>
       </section>
+
+      {/* Centres d'intérêt */}
+      <section className="apropos-section">
+        <h2 className="apropos-section-titre">
+          <span className="section-titre-accent">// </span>Centres d'intérêt
+        </h2>
+        <div className="interets-grid">
+          <div className="interet-item">
+            <span className="interet-icon">🚀</span>
+            <h3>Innovation Technologique</h3>
+            <p>Suivi des dernières tendances en cloud computing et cybersécurité.</p>
+          </div>
+          <div className="interet-item">
+            <span className="interet-icon">📚</span>
+            <h3>Apprentissage Continu</h3>
+            <p>Formation en ligne et certifications pour rester à jour.</p>
+          </div>
+          <div className="interet-item">
+            <span className="interet-icon">🤝</span>
+            <h3>Communauté Open Source</h3>
+            <p>Contribution à des projets open source et partage de connaissances.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
