@@ -57,6 +57,17 @@ app.get("/", (_req, res) =>
   res.status(200).json({ success: true, message: "🚀 API Portfolio opérationnelle.", version: "1.0.0" })
 );
 
+// Route de santé de la base de données
+app.get("/health", async (_req, res) => {
+  try {
+    const mongoose = require("mongoose");
+    await mongoose.connection.db.admin().ping();
+    res.status(200).json({ success: true, message: "Base de données connectée.", status: "healthy" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Erreur de connexion à la base de données.", status: "unhealthy" });
+  }
+});
+
 // Ressource projets
 app.use("/api/projets", projetRoutes);
 
