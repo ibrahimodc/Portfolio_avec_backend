@@ -170,3 +170,24 @@ npm run build
 ```
 
 Pour un déploiement complet, utiliser Docker ou des services cloud comme Heroku, Vercel, etc.
+
+---
+
+## 🐛 Dépannage
+
+### Erreur de connexion MongoDB
+- Vérifier que MongoDB est démarré localement (`mongod`)
+- Contrôler l'URI dans `.env`
+- Pour Atlas, vérifier les credentials et l'accès IP
+
+### Port déjà utilisé
+- Changer le PORT dans `.env` (backend)
+- Ou tuer le processus : `lsof -ti:3001 | xargs kill`
+
+### Erreur CORS
+- Assurer que le frontend tourne sur le port 3000
+- Vérifier la configuration CORS dans `server.js`
+
+### Images non affichées
+- Placer les images dans `backend/uploads/`
+- Vérifier les permissions du dossier
