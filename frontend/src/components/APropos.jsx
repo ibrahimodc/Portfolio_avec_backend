@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Composant APropos - Page "À propos" affichant les informations personnelles,
+ * compétences, expériences et certifications de Ibrahima Diallo.
+ * @returns {JSX.Element} Le composant rendu
+ */
 function APropos() {
   const competences = [
     {
