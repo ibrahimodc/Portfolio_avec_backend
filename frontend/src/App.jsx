@@ -54,6 +54,9 @@ function App() {
 
         <footer className="app-footer">
           <span>© 2026 Ibrahima Diallo · aspirant Cloud &amp; DevSecOps Engineer · Dakar, Sénégal</span>
+          <a href="https://github.com/ibrahimodc/Portfolio_avec_backend" target="_blank" rel="noopener noreferrer" className="footer-link">
+            Voir sur GitHub
+          </a>
         </footer>
       </div>
     </Router>
