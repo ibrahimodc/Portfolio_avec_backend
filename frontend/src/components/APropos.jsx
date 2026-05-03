@@ -108,6 +108,9 @@ function APropos() {
               <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Visiter le profil LinkedIn de Ibrahima Diallo">
                 <span>💼</span> LinkedIn
               </a>
+              <a href="mailto:ibrahima.diallo@example.com" className="social-link" aria-label="Envoyer un email à Ibrahima Diallo">
+                <span>📧</span> Email
+              </a>
               <a href="https://maps.app.goo.gl/QRVo3GdPx6v4rBb7A" aria-label="Voir l'emplacement de Dakar, Sénégal sur Google Maps">
               <span className="social-link">
                 <span>📍</span> Dakar, Sénégal
