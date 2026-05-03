@@ -23,7 +23,9 @@
   "scripts": {
     "dev": "vite",
     "start": "react-scripts start",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix"
   },
   "eslintConfig": {
     "extends": [
