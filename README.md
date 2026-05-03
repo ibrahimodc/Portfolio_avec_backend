@@ -150,3 +150,23 @@ Nécessite l'extension **REST Client** (proposée automatiquement par VS Code).
 | `dotenv`   | Chargement des variables `.env`   |
 | `cors`     | Requêtes cross-origin (port 3000) |
 | `nodemon`  | Rechargement auto (dev)           |
+
+---
+
+## 🚀 Déploiement
+
+### Backend
+```bash
+cd backend
+npm run build  # Si applicable
+npm start      # Production
+```
+
+### Frontend
+```bash
+cd frontend
+npm run build
+# Servir le dossier build/ avec un serveur statique
+```
+
+Pour un déploiement complet, utiliser Docker ou des services cloud comme Heroku, Vercel, etc.
