@@ -6,6 +6,13 @@
 
 const API_URL = "/api/projets";
 
+/**
+ * Fonction utilitaire pour effectuer des requêtes HTTP vers l'API.
+ * @param {string} url - URL de l'endpoint
+ * @param {Object} options - Options de fetch (method, headers, body, etc.)
+ * @returns {Promise<Object>} Données JSON de la réponse
+ * @throws {Error} Si la requête échoue
+ */
 async function request(url, options = {}) {
   const res  = await fetch(url, options);
   const json = await res.json();
