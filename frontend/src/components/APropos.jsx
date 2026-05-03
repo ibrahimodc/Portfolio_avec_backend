@@ -85,9 +85,11 @@ function APropos() {
             <p className="apropos-titre-poste">Ingénieur Cloud · DevSecOps · SysAdmin</p>
             <p className="apropos-bio">
               Passionné par l'automatisation, la sécurité des infrastructures et le cloud natif,
-              je suis apprenant de la Sonatel Academie en AWS dans le but de pouvoir  concevoir et déployer des architectures résilientes et sécurisées. Mon approche
+              je suis apprenant de la Sonatel Academie en AWS dans le but de pouvoir concevoir et déployer des architectures résilientes et sécurisées. Mon approche
               combine <strong>Infrastructure as Code</strong>, pipelines <strong>CI/CD</strong> robustes
               et intégration native de la sécurité dans chaque étape du cycle de vie logiciel.
+              Avec une expérience en administration système et réseau, je m'efforce de créer des solutions
+              scalables et fiables pour répondre aux défis modernes du numérique.
             </p>
             <div className="apropos-hero-actions">
               <Link to="/projets" className="btn btn-principal">Voir mes projets</Link>
