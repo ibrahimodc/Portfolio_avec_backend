@@ -27,6 +27,11 @@ function APropos() {
       categorie: "Systèmes & Réseaux",
       icon: "🖥️",
       items: ["Linux (Ubuntu, RHEL)", "Ansible", "Nginx", "VPN / Firewalls", "DNS", "Load Balancing"]
+    },
+    {
+      categorie: "Développement & Scripting",
+      icon: "💻",
+      items: ["Python", "Bash", "JavaScript", "YAML", "JSON", "Git"]
     }
   ];
 
