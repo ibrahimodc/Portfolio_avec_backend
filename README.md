@@ -1,6 +1,46 @@
-# 🗂️ Portfolio Fullstack — React + Express + MongoDB
+# 🗂️ Portfolio Fullstack — React + Express + MongoDB + Docker
 
-Application SPA de gestion de portfolio avec backend REST complet.
+Application SPA de gestion de portfolio avec backend REST complet, déployée en 3 conteneurs Docker indépendants.
+
+---
+
+## 🐳 Architecture Docker
+
+Ce projet est conteneurisé avec **3 services Docker** orchestrés via `docker-compose.yml` :
+
+| Service | Image | Source | Port |
+|---------|-------|--------|------|
+| **Frontend** | `ibraahiimm/portfolio-frontend` | [Docker Hub](https://hub.docker.com/r/ibraahiimm/portfolio-frontend) | `3000` |
+| **Backend** | `ibraahiimm/portfolio-backend` | [Docker Hub](https://hub.docker.com/r/ibraahiimm/portfolio-backend) | `3001` |
+| **MongoDB** | `mongo:7` | Image officielle Docker Hub | `27017` |
+
+> MongoDB utilise l'image officielle `mongo:7` — il n'est pas nécessaire de la pousser sur Docker Hub car elle est maintenue par l'équipe MongoDB elle-même.
+
+### Lancer le projet en 1 commande
+
+```bash
+docker compose up -d
+```
+
+L'application sera disponible sur : **http://localhost:3000**
+
+### Mettre à jour les images sur Docker Hub
+
+```bash
+# Rebuild et push
+docker compose build
+docker compose push
+```
+
+### Accéder à la base de données MongoDB
+
+```bash
+# Ouvrir le shell MongoDB dans le conteneur
+docker exec -it portfolio-mongo mongosh portfolio_db
+
+# Voir tous les projets
+db.projets.find().pretty()
+```
 
 ---
 
