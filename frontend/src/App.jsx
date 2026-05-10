@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
 import Dossier from './components/Dossier';
 import Accueil from './components/Accueil';
@@ -6,7 +6,23 @@ import Contact from './components/Contact';
 import APropos from './components/APropos';
 import './styles/App.css';
 
+function useTheme() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('portfolio-theme') || 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
+
+  const toggle = () => setTheme(t => t === 'light' ? 'dark' : 'light');
+  return { theme, toggle };
+}
+
 function App() {
+  const { theme, toggle } = useTheme();
+
   return (
     <Router>
       <div className="app">
@@ -37,6 +53,15 @@ function App() {
               <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
                 Contact
               </NavLink>
+
+              <button
+                className="btn-theme"
+                onClick={toggle}
+                aria-label={theme === 'light' ? 'Activer le mode sombre' : 'Activer le mode clair'}
+                title={theme === 'light' ? 'Mode sombre' : 'Mode clair'}
+              >
+                {theme === 'light' ? '🌙' : '☀️'}
+              </button>
             </div>
           </div>
         </header>

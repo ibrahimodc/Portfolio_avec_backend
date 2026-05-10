@@ -38,11 +38,11 @@ function Accueil() {
             <div className="hero-avatar-container">
               <div className="hero-avatar-glow" />
               <img
-                src="/assets/team/ibrahim-diallo.jpg"
+                src="/assets/Moi.png"
                 alt="Ibrahima Diallo — Cloud & DevSecOps Engineer"
                 className="hero-avatar-img"
                 onError={(e) => {
-                  e.target.src = 'https://placehold.co/400x500/0369a1/ffffff?text=Ibrahima+Diallo';
+                  e.target.src = '/assets/team/ibrahim-diallo.jpg';
                 }}
               />
               <div className="hero-avatar-badge hero-avatar-badge--top">

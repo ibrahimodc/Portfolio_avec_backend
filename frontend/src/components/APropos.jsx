@@ -61,11 +61,11 @@ function APropos() {
           <div className="apropos-avatar-wrapper">
             <div className="apropos-avatar-ring">
               <img
-                src="/assets/team/ibrahim-diallo.jpg"
+                src="/assets/Moi.png"
                 alt="Ibrahima Diallo"
                 className="apropos-avatar"
                 onError={(e) => {
-                  e.target.src = `https://placehold.co/200x200/0369a1/ffffff?text=ID`;
+                  e.target.src = '/assets/team/ibrahim-diallo.jpg';
                 }}
               />
             </div>

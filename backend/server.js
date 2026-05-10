@@ -19,11 +19,18 @@ connectDB();
 const app = express();
 const path = require("path");
 
-// Autorise les requêtes depuis le frontend React (tous les ports localhost en dev)
-app.use(cors({ 
+// Autorise les requêtes depuis le frontend React
+const ALLOWED_ORIGINS = [
+  /^http:\/\/localhost(:\d+)?$/,           // dev local
+  /^http:\/\/127\.0\.0\.1(:\d+)?$/,        // loopback
+];
+if (process.env.FRONTEND_URL) {
+  ALLOWED_ORIGINS.push(new RegExp(`^${process.env.FRONTEND_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`));
+}
+
+app.use(cors({
   origin: (origin, callback) => {
-    // Autoriser localhost en développement
-    if (!origin || origin.startsWith("http://localhost")) {
+    if (!origin || ALLOWED_ORIGINS.some(r => r.test(origin))) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));

@@ -49,6 +49,15 @@ function Contact() {
         <p>Une question, une opportunité ? Je suis disponible et vous répondrai rapidement.</p>
       </div>
 
+      <div className="contact-illustration">
+        <img
+          src="/assets/formContact.png"
+          alt="Formulaire de contact"
+          className="contact-illustration-img"
+          onError={(e) => { e.target.style.display = 'none'; }}
+        />
+      </div>
+
       <div className="contact-contenu">
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
           <div className="champ-row">
