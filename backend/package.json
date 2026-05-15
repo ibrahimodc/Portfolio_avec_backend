@@ -1,24 +1,17 @@
 {
-  "name": "portfolio-api",
-  "version": "1.0.0",
-  "description": "API REST Portfolio — Express.js + MongoDB",
+  "name": "portfolio-backend",
+  "version": "2.0.0",
+  "description": "API REST Portfolio — Express.js + JSON file DB (pas de MongoDB)",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
-    "dev": "nodemon server.js",
-    "build": "cd ../frontend && npm run build && cd ../backend",
-    "build:full": "npm run build && npm start"
+    "start": "node server.js",
+    "dev":   "nodemon server.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mongodb": "^7.2.0",
-    "mongoose": "^8.4.1",
-    "multer": "^2.1.1"
+    "cors":    "^2.8.5",
+    "express": "^4.19.2"
   },
   "devDependencies": {
-    "cross-env": "^10.1.0",
     "nodemon": "^3.1.4"
   },
   "license": "ISC"

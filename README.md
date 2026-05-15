@@ -7,9 +7,11 @@ Application SPA de gestion de portfolio avec backend REST complet.
 ## ⚡ Démarrage rapide
 
 ### 1. Ouvrir dans VS Code
+
 ```
 Fichier → Ouvrir le dossier → sélectionner portfolio-fullstack/
 ```
+
 VS Code proposera d'installer les extensions recommandées — accepter.
 
 ---
@@ -116,13 +118,13 @@ portfolio-fullstack/
 
 ## 🔗 Endpoints de l'API
 
-| Méthode  | URL                    | Action                       |
-|----------|------------------------|------------------------------|
-| `GET`    | `/api/projets`         | Récupérer tous les projets   |
-| `GET`    | `/api/projets/:id`     | Récupérer un projet par ID   |
-| `POST`   | `/api/projets`         | Ajouter un projet            |
-| `PUT`    | `/api/projets/:id`     | Modifier un projet           |
-| `DELETE` | `/api/projets/:id`     | Supprimer un projet          |
+| Méthode  | URL                | Action                     |
+| -------- | ------------------ | -------------------------- |
+| `GET`    | `/api/projets`     | Récupérer tous les projets |
+| `GET`    | `/api/projets/:id` | Récupérer un projet par ID |
+| `POST`   | `/api/projets`     | Ajouter un projet          |
+| `PUT`    | `/api/projets/:id` | Modifier un projet         |
+| `DELETE` | `/api/projets/:id` | Supprimer un projet        |
 
 ---
 
@@ -144,7 +146,7 @@ Nécessite l'extension **REST Client** (proposée automatiquement par VS Code).
 ## 📦 Dépendances Backend
 
 | Package    | Rôle                              |
-|------------|-----------------------------------|
+| ---------- | --------------------------------- |
 | `express`  | Framework HTTP                    |
 | `mongoose` | ODM MongoDB                       |
 | `dotenv`   | Chargement des variables `.env`   |

@@ -7,7 +7,7 @@
 const API_URL = "/api/projets";
 
 async function request(url, options = {}) {
-  const res  = await fetch(url, options);
+  const res = await fetch(url, options);
   const json = await res.json();
   if (!res.ok) throw new Error(json.message || `Erreur HTTP ${res.status}`);
   return json;
@@ -61,7 +61,10 @@ export async function updateProjet(id, projet, file = null) {
     form.append("description", projet.description);
     form.append("technologies", projet.technologies.join(","));
     if (projet.lien) form.append("lien", projet.lien);
-    const json = await request(`${API_URL}/${id}`, { method: "PUT", body: form });
+    const json = await request(`${API_URL}/${id}`, {
+      method: "PUT",
+      body: form,
+    });
     return json.data;
   }
   const json = await request(`${API_URL}/${id}`, {
